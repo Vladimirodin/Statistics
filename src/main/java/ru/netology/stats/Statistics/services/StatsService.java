@@ -1,7 +1,7 @@
 package ru.netology.stats.Statistics.services;
 
 
-public class StatsService<maxMonth> {
+public class StatsService {
 
     public int minSales(long[] sales) { // Номер месяца минимальных продаж.
         int minMonth = 0;
@@ -31,13 +31,12 @@ public class StatsService<maxMonth> {
         return maxMonth + 1;
     }
 
-    public long sumAllSales(long[] sales) { // Сумма всех продаж
-        long sale[] = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long sum = 0;
-        for (int i = 0; i < sale.length; i++) {
-            sum = sum + sale[i];
+    public long sumAllSales(long[] sales) { // Сумма всех продаж.
+        long sumSale = 0;
+        for (int i = 0; i < sales.length; i++) {
+            sumSale = sumSale + sales[i];
         }
-        return sum;
+        return sumSale;
     }
 
     public long averageAmountSalesMonth(long[] sales) { // Средняя сумма продаж в месяц.
